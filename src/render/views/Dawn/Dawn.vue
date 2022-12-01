@@ -3,8 +3,6 @@ import { provide } from 'vue';
 import HeaderVue from "@render/common/Header/Header.vue"
 import { Dawn } from './Dawn'
 
-provide('view', 'Dawn')
-
 const instance = new Dawn()
 
 provide('instance', instance)
@@ -20,7 +18,7 @@ instance.Run()
 
 <template>
     <div class="Dawn">
-        <HeaderVue></HeaderVue>
+        <HeaderVue :view="'Dawn'"></HeaderVue>
         <n-button type="primary" class="Btn" @click="instance.Test()">
             Emit
         </n-button>
