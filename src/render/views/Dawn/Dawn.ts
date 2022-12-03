@@ -1,8 +1,11 @@
 import { AActor } from "@libs/AActor"
 import { onMounted, onUnmounted } from "vue"
+import { Menu } from "./Components/Menu/Menu"
 
 class Dawn extends AActor {
     public constructor() { super() }
+
+    public menu = new Menu(this)
 
     public InitStates() {
         return {}

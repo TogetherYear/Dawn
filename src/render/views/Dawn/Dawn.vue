@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { provide } from 'vue';
-import HeaderVue from "@render/common/Header/Header.vue"
+import HeaderBarVue from '@render/common/HeaderBar/HeaderBar.vue';
+import Menuvue from './Components/Menu/Menu.vue'
 import { Dawn } from './Dawn'
 
 const instance = new Dawn()
@@ -18,10 +19,8 @@ instance.Run()
 
 <template>
     <div class="Dawn">
-        <HeaderVue :view="'Dawn'"></HeaderVue>
-        <n-button type="primary" class="Btn" @click="instance.Test()">
-            Emit
-        </n-button>
+        <HeaderBarVue :view="'Dawn'"></HeaderBarVue>
+        <Menuvue></Menuvue>
     </div>
 </template>
 
