@@ -13,8 +13,9 @@ instance.menu.Run()
 
 <template>
     <div class="Menu">
-        <span class="Display" v-for="d in showList" :key="d.id" @click="instance.menu.OnDisplayClick(d)">
-            <span class="Icon" :style="{ backgroundColor: currentDisplay == d.key ? '#212121' : '#2b2b2b' }">
+        <span class="Display" v-for="d in showList" :key="d.id" @click="instance.menu.OnDisplayClick(d)"
+            :style="{ backgroundColor: currentDisplay == d.key ? '#7e3826' : '#2b2b2b' }">
+            <span class="Icon">
                 <img :src="d.icon" alt="">
             </span>
         </span>

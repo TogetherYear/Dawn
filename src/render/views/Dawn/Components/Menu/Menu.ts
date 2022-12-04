@@ -1,8 +1,10 @@
 import { Dusk } from "@render/decorators/Dusk"
 import { onMounted, onUnmounted, ref } from "vue"
 import { Dawn } from "../../Dawn"
-import droneIcon from '@render/assets/menu/drone.png'
-import recordIcon from '@render/assets/menu/record.png'
+import homeIcon from '@render/assets/menu/home.png'
+import messageIcon from '@render/assets/menu/message.png'
+import helpIcon from '@render/assets/menu/help.png'
+import settingIcon from '@render/assets/menu/setting.png'
 import { Time } from "@libs/Time"
 
 class Menu {
@@ -13,11 +15,13 @@ class Menu {
     private parent: Dawn | null = null
 
     private showList = ref<Array<Dusk.IMenu>>([
-        { key: Dusk.MenuDisplay.DRONE, id: Time.GenerateRandomUid(), icon: droneIcon },
-        { key: Dusk.MenuDisplay.RECORD, id: Time.GenerateRandomUid(), icon: recordIcon },
+        { key: Dusk.MenuDisplay.HOME, id: Time.GenerateRandomUid(), icon: homeIcon },
+        { key: Dusk.MenuDisplay.MESSAGE, id: Time.GenerateRandomUid(), icon: messageIcon },
+        { key: Dusk.MenuDisplay.HELP, id: Time.GenerateRandomUid(), icon: helpIcon },
+        { key: Dusk.MenuDisplay.SETTING, id: Time.GenerateRandomUid(), icon: settingIcon },
     ])
 
-    private currentDisplay = ref<Dusk.MenuDisplay>(Dusk.MenuDisplay.DRONE)
+    private currentDisplay = ref<Dusk.MenuDisplay>(Dusk.MenuDisplay.HOME)
 
     public InitStates() {
         return {

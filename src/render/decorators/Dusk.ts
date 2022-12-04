@@ -6,8 +6,10 @@ namespace Dusk {
     }
 
     export enum MenuDisplay {
-        DRONE,
-        RECORD
+        HOME,
+        MESSAGE,
+        HELP,
+        SETTING
     }
 }
 export { Dusk }
