@@ -21,6 +21,9 @@ instance.Run()
     <div class="Dawn">
         <HeaderBarVue :view="'Dawn'"></HeaderBarVue>
         <Menuvue></Menuvue>
+        <span class="RouterViewVue">
+            <router-view></router-view>
+        </span>
     </div>
 </template>
 

@@ -15,4 +15,14 @@
         right: 0;
         margin: auto;
     }
+
+    .RouterViewVue {
+        position: absolute;
+        width: calc(100% - 50px);
+        height: calc(100% - 26px);
+        top: 26px;
+        left: 50px;
+        color: #ffffff;
+        background-color: #212121;
+    }
 }

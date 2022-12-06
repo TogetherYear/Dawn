@@ -15,7 +15,26 @@
         left: 0;
         right: 0;
         margin: auto;
-        transition: all 0.2s;
+
+        .Back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            transition: all 0.2s;
+            background: linear-gradient(90deg, #7e3826, #2b2b2b);
+
+            &::before {
+                position: absolute;
+                content: "";
+                width: 3px;
+                height: 100%;
+                left: 0;
+                top: 0;
+                background-color: #cf4e2d;
+            }
+        }
 
         .Icon {
             position: absolute;
@@ -24,6 +43,10 @@
             top: 0;
             left: 0;
             cursor: pointer;
+
+            &:hover img {
+                transform: scale(1.2);
+            }
 
             img {
                 position: absolute;
@@ -34,6 +57,7 @@
                 right: 0;
                 margin: auto;
                 filter: drop-shadow(0px 0px 6px #ffffff);
+                transition: all 0.2s;
             }
         }
     }

@@ -6,6 +6,7 @@ import messageIcon from '@render/assets/menu/message.png'
 import helpIcon from '@render/assets/menu/help.png'
 import settingIcon from '@render/assets/menu/setting.png'
 import { Time } from "@libs/Time"
+import router from "@render/router"
 
 class Menu {
     public constructor(parent: Dawn | null = null) {
@@ -15,10 +16,10 @@ class Menu {
     private parent: Dawn | null = null
 
     private showList = ref<Array<Dusk.IMenu>>([
-        { key: Dusk.MenuDisplay.HOME, id: Time.GenerateRandomUid(), icon: homeIcon },
-        { key: Dusk.MenuDisplay.MESSAGE, id: Time.GenerateRandomUid(), icon: messageIcon },
-        { key: Dusk.MenuDisplay.HELP, id: Time.GenerateRandomUid(), icon: helpIcon },
-        { key: Dusk.MenuDisplay.SETTING, id: Time.GenerateRandomUid(), icon: settingIcon },
+        { key: Dusk.MenuDisplay.HOME, id: Time.GenerateRandomUid(), icon: homeIcon, path: '/Dawn/Home' },
+        { key: Dusk.MenuDisplay.MESSAGE, id: Time.GenerateRandomUid(), icon: messageIcon, path: '/Dawn/Message' },
+        { key: Dusk.MenuDisplay.HELP, id: Time.GenerateRandomUid(), icon: helpIcon, path: '/Dawn/Help' },
+        { key: Dusk.MenuDisplay.SETTING, id: Time.GenerateRandomUid(), icon: settingIcon, path: '/Dawn/Setting' },
     ])
 
     private currentDisplay = ref<Dusk.MenuDisplay>(Dusk.MenuDisplay.HOME)
@@ -50,6 +51,7 @@ class Menu {
 
     public OnDisplayClick(e: Dusk.IMenu) {
         this.currentDisplay.value = e.key
+        router.push({ path: e.path, query: {} })
     }
 }
 
