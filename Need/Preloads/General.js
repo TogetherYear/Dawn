@@ -5,5 +5,6 @@ window.General = {
         Max: () => {
             ipcRenderer.send("DawnMax")
         }
-    }
+    },
+    ipcRenderer: ipcRenderer
 }
