@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { inject } from 'vue';
 import { Dawn } from '../../Dawn';
+import extendIcon from '@render/assets/menu/extend.png'
 
 const instance = inject('instance') as Dawn
 const {
@@ -18,6 +19,9 @@ instance.menu.Run()
             <span class="Icon">
                 <img :src="d.icon" alt="">
             </span>
+        </span>
+        <span class="Extend" @click="instance.menu.OnExtendClick()">
+            <img :src="extendIcon" alt="">
         </span>
     </div>
 </template>

@@ -53,6 +53,10 @@ class Menu {
         this.currentDisplay.value = e.key
         router.push({ path: e.path, query: {} })
     }
+
+    public OnExtendClick() {
+        console.log('Extend')
+    }
 }
 
 export { Menu }
