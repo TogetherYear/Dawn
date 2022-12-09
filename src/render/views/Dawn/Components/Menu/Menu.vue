@@ -21,7 +21,10 @@ instance.menu.Run()
             </span>
         </span>
         <span class="Extend" @click="instance.menu.OnExtendClick()">
-            <img :src="extendIcon" alt="">
+            <span class="Back"></span>
+            <span class="Icon">
+                <img :src="extendIcon" alt="">
+            </span>
         </span>
     </div>
 </template>
