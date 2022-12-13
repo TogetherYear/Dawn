@@ -29,7 +29,7 @@ class ResourceLoad {
     public GetPageByName(name: string = '/') {
         return app.isPackaged
             ? `file://${path.join(__dirname, `../render/index.html#${name}`)}`.replaceAll('\\', '/')
-            : `http://localhost:6768#${name}`
+            : `http://localhost:1025#${name}`
     }
 
     public GetPreloadByName(name: string) {

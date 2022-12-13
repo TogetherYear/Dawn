@@ -18,7 +18,7 @@ export default defineConfig({
   base: './', // index.html 中静态资源加载位置
   envDir: join(__dirname, 'env'),
   server: {
-    port: 6768 // 开发环境的启动端口
+    port: 1025 // 开发环境的启动端口
   },
   resolve: {
     alias: {

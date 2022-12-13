@@ -1,5 +1,5 @@
 import { Dusk } from "@render/decorators/Dusk"
-import { onMounted, onUnmounted, ref } from "vue"
+import { onMounted, onUnmounted, ref, watch } from "vue"
 import { Dawn } from "../../Dawn"
 import homeIcon from '@render/assets/menu/home.png'
 import messageIcon from '@render/assets/menu/message.png'
@@ -24,18 +24,29 @@ class Menu {
 
     private currentDisplay = ref<Dusk.MenuDisplay>(Dusk.MenuDisplay.HOME)
 
+    private isShow = ref<boolean>(false)
+
     public InitStates() {
         return {
             showList: this.showList,
             currentDisplay: this.currentDisplay,
+            isShow: this.isShow,
         }
     }
 
     public InitHooks() {
-
+        watch(this.isShow, (newValue) => {
+            if (newValue) {
+                this.OnShow()
+            }
+            else {
+                this.OnHide()
+            }
+        })
     }
 
     public Run() {
+        this.ListenEvents()
         onMounted(() => {
 
         })
@@ -49,13 +60,29 @@ class Menu {
 
     }
 
+    private ListenEvents() {
+        window.addEventListener('keydown', (e) => {
+            this.OnKeyDown(e)
+        })
+    }
+
+    private OnKeyDown(e: KeyboardEvent) {
+        if (e.key == 'Tab') {
+            this.isShow.value = !this.isShow.value
+        }
+    }
+
     public OnDisplayClick(e: Dusk.IMenu) {
         this.currentDisplay.value = e.key
         router.push({ path: e.path, query: {} })
     }
 
-    public OnExtendClick() {
-        console.log('Extend')
+    private OnShow() {
+
+    }
+
+    private OnHide() {
+
     }
 }
 

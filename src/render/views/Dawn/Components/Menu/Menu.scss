@@ -1,107 +1,21 @@
 .Menu {
     position: absolute;
-    width: 50px;
+    width: 100%;
     height: 100%;
     -webkit-app-region: no-drag;
     left: 0;
     top: 0;
-    background-color: #2b2b2b;
+    z-index: 999;
 
-    .Display {
-        position: relative;
-        display: block;
+    .Back {
+        position: absolute;
         width: 100%;
-        height: 50px;
+        height: 100%;
+        top: 0;
+        bottom: 0;
         left: 0;
         right: 0;
         margin: auto;
-
-        .Back {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            transition: all 0.2s;
-            background: linear-gradient(90deg, #7e3826, #2b2b2b);
-
-            &::before {
-                position: absolute;
-                content: "";
-                width: 3px;
-                height: 100%;
-                left: 0;
-                top: 0;
-                background-color: #cf4e2d;
-            }
-        }
-
-        .Icon {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            cursor: pointer;
-
-            &:hover img {
-                transform: scale(1.2);
-            }
-
-            img {
-                position: absolute;
-                width: 40%;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                margin: auto;
-                filter: drop-shadow(0px 0px 6px #ffffff);
-                transition: all 0.2s;
-            }
-        }
-    }
-
-    .Extend {
-        position: absolute;
-        width: 50px;
-        height: 50px;
-        bottom: 0;
-        left: 0;
-        cursor: pointer;
-
-        &:hover .Icon img {
-            transform: scale(1.1);
-        }
-
-        .Back {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-        }
-
-        .Icon {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-
-            img {
-                position: absolute;
-                width: 50%;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                margin: auto;
-                filter: drop-shadow(0px 0px 6px #ffffff);
-                transition: all 0.2s;
-            }
-        }
-
-
+        background-color: #212121;
     }
 }

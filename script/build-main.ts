@@ -24,7 +24,7 @@ const TAG = '[build-main.ts]'
 const spinner = ora(`${TAG} Electron build...`)
 
 if (argv.watch) {
-  waitOn({ port: 6768 }).then(msg => {
+  waitOn({ port: 1025 }).then(msg => {
     const watcher = watch(opts)
     let child: ChildProcess
     watcher.on('change', filename => {

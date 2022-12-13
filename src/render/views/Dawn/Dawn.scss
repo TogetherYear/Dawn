@@ -6,22 +6,12 @@
     top: 0;
     user-select: none;
 
-    .Btn {
-        position: absolute;
-        width: 100px;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-    }
-
     .RouterViewVue {
         position: absolute;
-        width: calc(100% - 50px);
+        width: 100%;
         height: calc(100% - 26px);
         top: 26px;
-        left: 50px;
+        left: 0;
         color: #ffffff;
         background-color: #212121;
     }
