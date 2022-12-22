@@ -22,28 +22,6 @@ const routes: Array<RouteRecordRaw> = [
         path: '/Dawn',
         name: 'Dawn',
         component: DawnVue,
-        children: [
-            {
-                path: 'Home',
-                name: 'Home',
-                component: HomeVue,
-            },
-            {
-                path: 'Message',
-                name: 'Message',
-                component: MessageVue,
-            },
-            {
-                path: 'Help',
-                name: 'Help',
-                component: HelpVue,
-            },
-            {
-                path: 'Setting',
-                name: 'Setting',
-                component: SettingVue,
-            },
-        ]
     }
 ]
 

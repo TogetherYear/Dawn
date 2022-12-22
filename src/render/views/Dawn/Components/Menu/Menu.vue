@@ -5,8 +5,6 @@ import { Dawn } from '../../Dawn';
 const instance = inject('instance') as Dawn
 const {
     isShow,
-    showList,
-    currentDisplay
 } = instance.menu.InitStates()
 instance.menu.InitHooks()
 instance.menu.Run()
